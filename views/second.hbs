@@ -1,0 +1,337 @@
+<div class="fixed-container">
+  <!-- Introduction -->
+  <div class="question-container" data-number="0">
+    <div class="question">
+      <h1>Infectious Diseases Expert System</h1>
+      <p>Answer 16 questions and we will tell you if you have a chance of having COVID-19 or other Infectious diseases.
+        <br><span style="color:rgb(31, 31, 187);">Estimated time to finish : 5minutes</span>
+      </p>
+      <div class="image">
+      <img src="/cor.png"/>
+      <img src="/Lassa.png"/>
+      </div>
+    </div>
+    <div class="input">
+      <button class="submit" data-answer-type="choice">OK ✔</button>
+    </div>
+  </div>
+
+  <!-- question 0 -->
+  <div class="question-container" data-number="1">
+    <div class="question">
+      <h1>What is your name?</h1>
+      <p>Your name</p>
+    </div>
+    <div class="input">
+      <input id="nameInput" type="text" placeholder="Type your answer here." />
+      <button data-answer-type="text" class="submit">OK ✔</button>
+      <p id="nameInputReminder" style="color: red; display: none;">Fill in your name</p>
+    </div>
+  </div>
+
+  <!-- question 1 -->
+  <div class="question-container" data-number="2">
+    <div class="question">
+      <h1>1. How old are you?</h1>
+      <p>In years old.</p>
+    </div>
+    <div class="input">
+      <input id="ageInput" type="text" placeholder="Type your answer here." />
+      <button data-answer-type="number" class="submit">OK ✔</button>
+      <p id="ageInputReminder" style="color: red; display: none;">Fill in your age (MUST be a NUMBER and a VALID age).</p>
+    </div>
+  </div>
+  
+  <!-- question 2 -->
+  <div class="question-container" data-number="3">
+    <div class="question">
+      <h1>2. What is your gender?</h1>
+      <p>Male or Female.</p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="gender" data-choice="male" data-answer-type="choice" class="submit" style="width: 6rem;">Male</button>
+      </div>
+      <div>
+        <button data-question="gender" data-choice="female" data-answer-type="choice" class="submit" style="width: 6rem;">Female</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- question 3 -->
+  <div class="question-container" data-number="4">
+    <div class="question">
+      <h1>3. Do you have any family health history of any Infectious disease?</h1>
+      <p>Some examples of Infectious diseases are Covid-19, Lassa Fever, Ebola etc.</p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="familyHistory" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="familyHistory" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 4 -->
+  <div class="question-container" data-number="5">
+    <div class="question">
+      <h1>4. Do you or any of Family Smoke</h1>
+      <p>Smoking can increases your risk of infectious disease by damaging your airways and the small air sacs (alveoli) found in your lungs.
+        Leading to difficulty in breathing
+      </p>
+      
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="smokingHistory" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="smokingHistory" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 5 -->
+  <div class="question-container" data-number="6">
+    <div class="question">
+      <h1>5. Do you feel chest pain?</h1>
+      <p>The possible causes of chest pain may be lung-related or due to infections.</p>
+      
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="chestPain" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="chestPain" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 6 -->
+  <div class="question-container" data-number="7">
+    <div class="question">
+      <h1>6. Do you cough?</h1>
+      <p>Coughing is one of the symptoms of many infectious diseases.</p>
+      <p>Source: <a target="_blank" href="https://www.webmd.com/lung/dont-ignore-breathing-problems#:~:text=A%20thick%2C%20wet%20cough%20can,well%20as%20they%20used%20to.">www.webmd.com</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="cough" data-choice="dry" data-answer-type="choice" class="submit" style="width: 14rem;">Yes. Dry Coughing.</button>
+      </div>
+      <div>
+        <button data-question="cough" data-choice="productive" data-answer-type="choice" class="submit" style="width: 14rem;">Yes. Productive (wet) Coughing.</button>
+      </div>
+      <div>
+        <button data-question="cough" data-choice="dry" data-answer-type="choice" class="submit" style="width: 14rem;">No.</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 7 -->
+  <div class="question-container" data-number="8">
+    <div class="question">
+      <h1>7. Do you cough up blood?</h1>
+      <p>The condition of coughing up blood (or Hemotypsis) indicates airway bleeding, and may be caused by many different infectious diseases such as Covid-19 or lassa.</p>
+     
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="coughingUpBlood" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="coughingUpBlood" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 8 -->
+  <div class="question-container" data-number="9">
+    <div class="question">
+      <h1>8. Do you have a fever?</h1>
+      <p>The CDC(Centers for Disease Control and Prevention)
+         considers a person to have a fever when he or she has measured temperature of 100.4°F (38°C).</p>
+     
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="fever" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="fever" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 9 -->
+  <div class="question-container" data-number="10">
+    <div class="question">
+      <h1>9. Do you experience rapid breathing?</h1>
+      <p>In adult humans at rest, any respiratory rate between 12 and 20 breaths is normal and tachypnea is indicated by a rate greater than 20 breaths per minute.</p>
+      <p>Source: <a target="_blank" href="https://en.wikipedia.org/wiki/Tachypnea#:~:text=Tachypnea%20is%20a%20respiration%20rate,resulting%20in%20abnormally%20rapid%20breathing.&text=In%20adult%20humans%20at%20rest,than%2020%20breaths%20per%20minute.">Wikipedia.</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="rapidBreathing" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="rapidBreathing" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 10 -->
+  <div class="question-container" data-number="11">
+    <div class="question">
+      <h1>10. Do you experience shortness of breath?</h1>
+      <p>Shortness of breath (or dyspnea) is often described as an intense tightening in the chest, air hunger, difficulty breathing, breathlessness or a feeling of suffocation.</p>
+      
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="shortnessOfBreath" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="shortnessOfBreath" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 11 -->
+  <div class="question-container" data-number="12">
+    <div class="question">
+      <h1>11. Do you experience rapid heartbeat?</h1>
+      <p>Tachycardia is the medical term for a heart rate over 100 beats per minute.</p>
+      <p>Source: <a target="_blank" href="https://www.mayoclinic.org/diseases-conditions/tachycardia/symptoms-causes/syc-20355127#:~:text=Tachycardia%20heartbeat,-In%20tachycardia%2C%20an&text=Tachycardia%20is%20the%20medical%20term,to%20have%20a%20fast%20heartbeat.">Mayoclinic</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="rapidHeartbeat" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="rapidHeartbeat" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 12 -->
+  <div class="question-container" data-number="13">
+    <div class="question">
+      <h1>12. Do you experience wheezing?</h1>
+      <p>Wheezing is a high-pitched whistling sound made while you breathe.</p>
+      <p>Source: <a target="_blank" href="https://www.healthline.com/health/wheezing#:~:text=Wheezing%20is%20a%20high%2Dpitched,that%20requires%20diagnosis%20and%20treatment.">www.healthline.com</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="wheezing" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="wheezing" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+ <!-- question 13 -->
+  <div class="question-container" data-number="14">
+    <div class="question">
+      <h1>13. Do you experience tiredness</h1>
+      <p>Tiredness is related to general malaise, fatigue and can be mild symptoms of lassa fever or Covid-19</p>
+       <p>Source: <a target="_blank" href="https://www.cdc.gov/vhf/lassa/symptoms/index.html">www.cdc.gov</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="tiredness" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="tiredness" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+<!-- question 14 -->
+  <div class="question-container" data-number="15">
+    <div class="question">
+      <h1>14. Do you experience tremor?</h1>
+      <p>refers to problems holding and controlling utensils, such as a spoon. shaking of hands, legs </p>
+       <p>Source: <a target="_blank" href="https://www.cdc.gov/vhf/lassa/symptoms/index.html">www.cdc.gov</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="tremor" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="tremor" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+  <!-- question 15 -->
+  <div class="question-container" data-number="16">
+    <div class="question">
+      <h1>15. Do you experience rapidVomiting?</h1>
+      <p>Rapid Vomiting is one of the symptoms of lassa fever </p>
+       <p>Source: <a target="_blank" href="https://www.cdc.gov/vhf/lassa/symptoms/index.html">www.cdc.gov</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="vomiting" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="vomiting" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+  <!-- question 16 -->
+  <div class="question-container" data-number="17">
+    <div class="question">
+      <h1>16. How long your symptoms last?</h1>
+      <p>Symptoms of some respiratory diseases like COVID 19 can last for months.</p>
+      <p>Source: <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/long-term-effects.html">www.cdc.gov</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="duration" data-choice="<1 week" data-answer-type="choice" class="submit" style="width: 12rem;">Less than one week</button>
+      </div>
+      <div>
+        <button data-question="duration" data-choice=">1 week, <4 weeks" data-answer-type="choice" class="submit" style="width: 12rem;">More than one week, less than a month</button>
+      </div>
+      <div>
+        <button data-question="duration" data-choice="months" data-answer-type="choice" class="submit" style="width: 12rem;">A few months</button>
+      </div>
+      <div>
+        <button data-question="duration" data-choice="years" data-answer-type="choice" class="submit" style="width: 12rem;">A few years</button>
+      </div>
+    </div>
+  </div>
+
+  <!--  Result -->
+  <div class="question-container" data-number="18">
+    <div class="question">
+      <h1 id="username">,</h1>
+      <p id="youhave">you probably have</p>
+      <h2 id="disease" style="font-weight: 400"></h2>
+      <p id="percentage"></p>
+      <details>
+        <summary>Review your answer</summary>
+        <p id="review-name">Name: </p>
+        <p id="review-age">Age: </p>
+        <p id="review-gender">Gender: </p>
+        <p id="review-familyHistory">Family Health History: </p>
+        <p id="review-smokingHistory">Smoking History: </p>
+        <p id="review-chestPain">Chest pain: </p>
+        <p id="review-cough">Coughing: </p>
+        <p id="review-coughingUpBlood">Coughing Blood: </p>
+        <p id="review-fever">Fever: </p>
+        <p id="review-rapidBreathing">Rapid Breathing: </p>
+        <p id="review-shortnessOfBreath">Shortness of breath: </p>
+        <p id="review-rapidHeartbeat">Rapid Heartbeat: </p>
+        <p id="review-wheezing">Wheezing: </p>
+        <p id="review-tiredness">Tiredness: </p>
+        <p id="review-tremor">Tremor: </p>
+        <p id="review-vomiting">Vomiting: </p>
+        <p id="review-duration">Duration of Symptoms: </p>
+      </details>
+      <button class="try-agn-btn" onclick="location.reload();">Try again</button>
+
+    </div>
+  </div>
+</div>
